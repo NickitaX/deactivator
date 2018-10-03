@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MenuActivity">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:gravity="center"
+        android:background="@color/colorPrimary"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <Button
+            android:id="@+id/continue_game_button"
+            android:background="@drawable/classic_button_shape"
+            android:text="Continue"
+            android:textColor="@color/colorNeonGreen"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content" />
+        <Button
+            android:id="@+id/new_game_button"
+            android:layout_margin="13dp"
+            android:background="@drawable/classic_button_shape"
+            android:text="New game"
+            android:textColor="@color/colorNeonGreen"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content" />
+        <Button
+            android:id="@+id/contribute_button"
+            android:background="@drawable/classic_button_shape"
+            android:text="Contribute"
+            android:textColor="@color/colorNeonGreen"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+</LinearLayout>
