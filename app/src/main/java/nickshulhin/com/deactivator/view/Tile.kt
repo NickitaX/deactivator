@@ -9,6 +9,7 @@ class Tile(context: Context, var code: Int) : RelativeLayout(context) {
 
     init {
         inflate(context, R.layout.tile_layout, this)
+        swapIcon(code)
     }
 
     fun swapIcon(code: Int) {
