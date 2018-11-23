@@ -14,7 +14,7 @@ class MenuActivity : AppCompatActivity() {
     }
 
     private fun setUpNewGameButton() {
-        val newGameButton: Button = findViewById(R.id.new_game_button)
+        val newGameButton: Button = findViewById(R.id.start_game_button)
         newGameButton.setOnClickListener {
             startActivity(Intent(it.context, MainActivity::class.java))
         }

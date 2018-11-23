@@ -12,24 +12,25 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
         <Button
-            android:id="@+id/continue_game_button"
-            android:background="@drawable/classic_button_shape"
-            android:text="Continue"
-            android:textColor="@color/colorNeonGreen"
-            android:layout_width="300dp"
-            android:layout_height="wrap_content" />
-        <Button
-            android:id="@+id/new_game_button"
+            android:id="@+id/start_game_button"
             android:layout_margin="13dp"
             android:background="@drawable/classic_button_shape"
-            android:text="New game"
+            android:text="Start game"
             android:textColor="@color/colorNeonGreen"
             android:layout_width="300dp"
             android:layout_height="wrap_content" />
         <Button
             android:id="@+id/contribute_button"
             android:background="@drawable/classic_button_shape"
-            android:text="Contribute"
+            android:text="Contribute on GitHub"
+            android:textColor="@color/colorNeonGreen"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content" />
+        <Button
+            android:layout_marginTop="13dp"
+            android:id="@+id/creator_button"
+            android:background="@drawable/classic_button_shape"
+            android:text="www.nickshulhin.com"
             android:textColor="@color/colorNeonGreen"
             android:layout_width="300dp"
             android:layout_height="wrap_content" />

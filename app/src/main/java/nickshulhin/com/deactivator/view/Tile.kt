@@ -5,14 +5,13 @@ import android.widget.ImageView
 import android.widget.RelativeLayout
 import nickshulhin.com.deactivator.R
 
-class Tile(context: Context) : RelativeLayout(context) {
-    var code: Int = 0
+class Tile(context: Context, var code: Int) : RelativeLayout(context) {
 
     init {
         inflate(context, R.layout.tile_layout, this)
     }
 
-    private fun swapIcon(code: Int) {
+    fun swapIcon(code: Int) {
         val iconView: ImageView = findViewById(R.id.tile_icon)
         when (code) {
             1 -> iconView.setImageResource(R.drawable.tile_icon_1)
@@ -24,7 +23,7 @@ class Tile(context: Context) : RelativeLayout(context) {
 
     fun incrementCode() {
         if (code >= 3) {
-            code = 0
+            code = 1
         } else{
             code += 1
         }

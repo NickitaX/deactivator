@@ -2,10 +2,30 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:gravity="center"
-    android:background="@color/colorPrimary"
     android:orientation="vertical"
-    android:id="@+id/main_game_layout"
+    android:background="@color/colorPrimary"
+    android:gravity="center"
     android:layout_height="match_parent"
     tools:context=".MainActivity">
+    <TextView
+        android:textStyle="bold"
+        android:layout_marginBottom="15dp"
+        android:textSize="25sp"
+        android:textColor="@color/colorNeonGreen"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <LinearLayout
+        android:id="@+id/main_game_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary"
+        android:orientation="vertical"/>
+    <Button
+        android:layout_marginTop="15dp"
+        android:id="@+id/deactivate_button"
+        android:background="@drawable/classic_button_shape"
+        android:text="DEACTIVATE"
+        android:textColor="@color/colorNeonGreen"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content" />
 </LinearLayout>
