@@ -8,6 +8,7 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
     <TextView
+        android:id="@+id/score_label"
         android:textStyle="bold"
         android:layout_marginBottom="15dp"
         android:textSize="25sp"
@@ -27,5 +28,13 @@
         android:text="DEACTIVATE"
         android:textColor="@color/colorNeonGreen"
         android:layout_width="300dp"
+        android:layout_height="wrap_content" />
+    <ProgressBar
+        android:paddingEnd="50dp"
+        android:paddingStart="50dp"
+        android:max="100"
+        android:id="@+id/progress_time"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content" />
 </LinearLayout>
