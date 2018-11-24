@@ -2,6 +2,7 @@ package nickshulhin.com.deactivator.view
 
 import android.content.Context
 import android.widget.LinearLayout
+import nickshulhin.com.deactivator.model.TileRow
 
 class TileSet(val context: Context) {
 

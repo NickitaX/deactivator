@@ -25,14 +25,14 @@
             android:id="@+id/start_game_button"
             android:layout_margin="13dp"
             android:background="@drawable/classic_button_shape"
-            android:text="Start game"
+            android:text="Start... Maybe again?"
             android:textColor="@color/colorNeonGreen"
             android:layout_width="300dp"
             android:layout_height="wrap_content" />
         <Button
             android:id="@+id/contribute_button"
             android:background="@drawable/classic_button_shape"
-            android:text="Contribute on GitHub"
+            android:text="Or ontribute on GitHub?"
             android:textColor="@color/colorNeonGreen"
             android:layout_width="300dp"
             android:layout_height="wrap_content" />

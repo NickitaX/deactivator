@@ -1,9 +1,10 @@
-package nickshulhin.com.deactivator.view
+package nickshulhin.com.deactivator.model
 
 import android.content.Context
 import android.widget.LinearLayout
 import android.widget.RelativeLayout
 import nickshulhin.com.deactivator.R
+import nickshulhin.com.deactivator.view.Tile
 
 class TileRow(context: Context) : RelativeLayout(context) {
 

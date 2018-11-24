@@ -9,7 +9,7 @@ import android.widget.Button
 import android.widget.LinearLayout
 import android.widget.TextView
 import nickshulhin.com.deactivator.utils.PuzzleUtils
-import nickshulhin.com.deactivator.view.TileRow
+import nickshulhin.com.deactivator.model.TileRow
 import nickshulhin.com.deactivator.view.TileSet
 import android.os.CountDownTimer
 import android.widget.ProgressBar
@@ -18,6 +18,8 @@ class MainActivity : AppCompatActivity() {
 
     lateinit var puzzle: MutableMap<Int, MutableMap<Int, Int>>
     lateinit var tileSet: TileSet
+    lateinit var gameTimer: CountDownTimer
+    lateinit var loadingPuzzleTimer: CountDownTimer
     var score = 0
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -33,7 +35,7 @@ class MainActivity : AppCompatActivity() {
         timeProgressBar.progressTintList = ColorStateList.valueOf(Color.WHITE);
         val scoreLabel = findViewById<TextView>(R.id.score_label)
         scoreLabel.text = "SCORE: ${score}"
-        object : CountDownTimer(20000, 1000) {
+        gameTimer = object : CountDownTimer(20000, 1000) {
             override fun onTick(millisUntilFinished: Long) {
                 timeProgressBar.progress += 5
             }
@@ -41,6 +43,8 @@ class MainActivity : AppCompatActivity() {
                 val intent = Intent(applicationContext, MenuActivity::class.java).apply {
                     putExtra("SCORE", score.toString())
                 }
+                gameTimer.cancel()
+                loadingPuzzleTimer.cancel()
                 startActivity(intent)
             }
         }.start()
@@ -63,7 +67,7 @@ class MainActivity : AppCompatActivity() {
     fun startPuzzle() {
         val scoreLabel = findViewById<TextView>(R.id.score_label)
         initiatePuzzle()
-        object : CountDownTimer(10000, 1000) {
+        loadingPuzzleTimer = object : CountDownTimer(30000, 1000) {
             override fun onTick(millisUntilFinished: Long) {
                 scoreLabel.text = "${millisUntilFinished/1000}"
             }
