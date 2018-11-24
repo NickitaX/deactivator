@@ -7,7 +7,7 @@ class TileSet(val context: Context) {
 
     val tileRows = mutableMapOf<Int, TileRow>()
 
-    fun createTileSet(layout: LinearLayout, rows: Int, columns: Int, puzzle: MutableMap<Int, MutableMap<Int, Int>>) {
+    fun createTileSet(layout: LinearLayout, rows: Int, columns: Int, puzzle: MutableMap<Int, MutableMap<Int, Int>>): TileSet{
         for (i in 1..rows) {
             val rowPuzzle = puzzle[i]
             val tileRow = TileRow(context).build(columns, rowPuzzle!!)
@@ -18,5 +18,6 @@ class TileSet(val context: Context) {
                     LinearLayout.LayoutParams.WRAP_CONTENT)
             layout.addView(tileRow)
         }
+        return this
     }
 }
